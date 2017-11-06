@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EDE146401FB06D60002DB854 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDE1463F1FB06D60002DB854 /* main.cpp */; };
+		EDE1464A1FB0770C002DB854 /* socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDE146481FB0770C002DB854 /* socket.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		EDE1463C1FB06D60002DB854 /* Nutshell.Library */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Nutshell.Library; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE1463F1FB06D60002DB854 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EDE146481FB0770C002DB854 /* socket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = socket.cpp; sourceTree = "<group>"; };
+		EDE146491FB0770C002DB854 /* socket.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = socket.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +60,27 @@
 		EDE1463E1FB06D60002DB854 /* Nutshell.Library */ = {
 			isa = PBXGroup;
 			children = (
+				EDE146461FB076EB002DB854 /* nutshell */,
 				EDE1463F1FB06D60002DB854 /* main.cpp */,
 			);
 			path = Nutshell.Library;
+			sourceTree = "<group>";
+		};
+		EDE146461FB076EB002DB854 /* nutshell */ = {
+			isa = PBXGroup;
+			children = (
+				EDE146471FB076F8002DB854 /* socket */,
+			);
+			path = nutshell;
+			sourceTree = "<group>";
+		};
+		EDE146471FB076F8002DB854 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				EDE146481FB0770C002DB854 /* socket.cpp */,
+				EDE146491FB0770C002DB854 /* socket.hpp */,
+			);
+			path = socket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDE1464A1FB0770C002DB854 /* socket.cpp in Sources */,
 				EDE146401FB06D60002DB854 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +250,61 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = AW37662HE7;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_calib3d.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_calib3d.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_calib3d.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_core.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_core.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_core.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_dnn.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_dnn.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_dnn.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_features2d.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_features2d.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_features2d.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_flann.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_flann.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_flann.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_highgui.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_highgui.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_highgui.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_imgcodecs.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_imgcodecs.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_imgcodecs.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_imgproc.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_imgproc.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_imgproc.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_ml.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_ml.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_ml.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_objdetect.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_objdetect.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_objdetect.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_photo.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_photo.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_photo.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_shape.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_shape.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_shape.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_stitching.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_stitching.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_stitching.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_superres.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_superres.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_superres.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_video.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_video.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_video.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_videoio.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_videoio.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_videoio.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_videostab.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_videostab.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_videostab.dylib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -236,6 +313,61 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = AW37662HE7;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_calib3d.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_calib3d.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_calib3d.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_core.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_core.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_core.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_dnn.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_dnn.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_dnn.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_features2d.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_features2d.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_features2d.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_flann.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_flann.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_flann.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_highgui.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_highgui.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_highgui.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_imgcodecs.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_imgcodecs.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_imgcodecs.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_imgproc.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_imgproc.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_imgproc.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_ml.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_ml.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_ml.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_objdetect.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_objdetect.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_objdetect.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_photo.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_photo.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_photo.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_shape.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_shape.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_shape.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_stitching.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_stitching.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_stitching.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_superres.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_superres.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_superres.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_video.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_video.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_video.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_videoio.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_videoio.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_videoio.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_videostab.3.3.1.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_videostab.3.3.dylib\"",
+					"\"$(SRCROOT)/../opencv-3.3.1/build/lib/libopencv_videostab.dylib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
