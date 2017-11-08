@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "nutshell/camera.hpp"
+#include "nutshell/camera/camera.hpp"
 
 using namespace nutshell::camera;
 

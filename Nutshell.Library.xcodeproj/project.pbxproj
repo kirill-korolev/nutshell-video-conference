@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED2CD8281FB274120013BD73 /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED2CD8261FB274120013BD73 /* camera.cpp */; };
+		ED2CD82B1FB282A80013BD73 /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED2CD82A1FB282A80013BD73 /* camera.cpp */; };
 		EDE146401FB06D60002DB854 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDE1463F1FB06D60002DB854 /* main.cpp */; };
 		EDE1464A1FB0770C002DB854 /* socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDE146481FB0770C002DB854 /* socket.cpp */; };
 /* End PBXBuildFile section */
@@ -25,9 +25,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		ED2CD8261FB274120013BD73 /* camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = camera.cpp; sourceTree = "<group>"; };
-		ED2CD8271FB274120013BD73 /* camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = camera.hpp; sourceTree = "<group>"; };
-		ED2CD8291FB278180013BD73 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		ED2CD82A1FB282A80013BD73 /* camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = camera.cpp; path = camera/camera.cpp; sourceTree = "<group>"; };
+		ED2CD82C1FB282C90013BD73 /* camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = camera.hpp; path = camera/camera.hpp; sourceTree = "<group>"; };
+		ED2CD82D1FB282D10013BD73 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = camera/config.h; sourceTree = "<group>"; };
 		EDE1463C1FB06D60002DB854 /* Nutshell.Library */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Nutshell.Library; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE1463F1FB06D60002DB854 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EDE146481FB0770C002DB854 /* socket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = socket.cpp; sourceTree = "<group>"; };
@@ -48,9 +48,9 @@
 		ED2CD8241FB273A80013BD73 /* camera */ = {
 			isa = PBXGroup;
 			children = (
-				ED2CD8261FB274120013BD73 /* camera.cpp */,
-				ED2CD8271FB274120013BD73 /* camera.hpp */,
-				ED2CD8291FB278180013BD73 /* config.h */,
+				ED2CD82A1FB282A80013BD73 /* camera.cpp */,
+				ED2CD82C1FB282C90013BD73 /* camera.hpp */,
+				ED2CD82D1FB282D10013BD73 /* config.h */,
 			);
 			name = camera;
 			sourceTree = "<group>";
@@ -154,8 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2CD82B1FB282A80013BD73 /* camera.cpp in Sources */,
 				EDE1464A1FB0770C002DB854 /* socket.cpp in Sources */,
-				ED2CD8281FB274120013BD73 /* camera.cpp in Sources */,
 				EDE146401FB06D60002DB854 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
