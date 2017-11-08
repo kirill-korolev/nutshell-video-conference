@@ -8,7 +8,10 @@ A C++ API that provides a bunch of methods to create your own video conference w
   - CSRSocket (conforms an interface of connect-send-receive)
   - TCPSocket
   - UDPSocket
-- OpenCV Image Processing
+- Camera Library 
+  - Initializes VideoCapture
+  - Encodes frames to a proper format
+  - Captures a scene
 
 # Libraries
 - Sockets standard library (a preprocessor chooses the right one depending on a platform)
